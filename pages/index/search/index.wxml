@@ -4,7 +4,7 @@
     <image class="icon" mode="widthFix" src="../../../assets/sousuo@2x.png"></image>
     <input placeholder="请输入搜索文字" bindconfirm="confirm" value="{{searchName}}"/>
   </view>
-  <text bindtap="cancle">取消</text>
+  <view class="cancleTxt" bindtap="cancle">取消</view>
 </view>
 <view class="main" wx:if="{{!showResults}}" style="padding: 40rpx;">
   <view class="title">热门推荐</view>

@@ -1,4 +1,5 @@
 // pages/index/detail/index.js
+
 Page({
 
 	/**
@@ -25,6 +26,7 @@ Page({
 		this.setData({
 			id:options.id
 		})
+
 		
 	},
 

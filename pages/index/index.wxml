@@ -1,0 +1,23 @@
+<!--pages/index/index.wxml-->
+<nav-bar 
+  type="search"
+></nav-bar>
+<component-model
+  getType="{{modelType}}"
+  id="mobileBind"
+></component-model>
+<component-login id="showLogin"></component-login> 
+<view class="content" style="padding-top:{{navH*2+100}}rpx;">
+  <scroll-view scroll-x class="tabBox" style="top:{{navH*2}}rpx;">
+    <view class="tabs">
+      <view class="{{item.id==listType?'active tab-item':'tab-item'}}" wx:for="{{tabs}}" wx:key="*this" bindtap="chooseTab" data-item="{{item.id}}">
+        <text>{{item.name}}</text>
+        <view class="line"></view>
+      </view>
+    </view>
+  </scroll-view> 
+  <component-list
+    listType="{{listType}}"
+    id="list"
+  ></component-list>
+</view>

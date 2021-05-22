@@ -1,0 +1,227 @@
+/* components/modal/modal.wxss */
+
+.modals {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.modals-cancel {
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.dialog-body>view{
+  position: absolute;
+  z-index: 1001;
+  bottom: 0;
+  top:0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.flexBox{
+  display: flex;
+  justify-content: space-between;
+}
+.flexStart{
+  justify-content: flex-start;
+}
+.content{
+  position: absolute;
+  width: 600rpx;
+  max-height: 420rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius:6px;
+}
+.mobileSet .content{
+  bottom: 0;
+  top:0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.content textarea{
+  padding:20rpx;
+  text-align: left;
+  margin-top: 20rpx;
+  height: 160rpx;
+  border:1px solid #f1f1f1;
+  width: 100%;
+  box-sizing: border-box;
+}
+.columnBox{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.mobileSet{
+  text-align: center;
+  font-size:32rpx;
+  border-radius: 20rpx;
+}
+.mobileSet .main{
+  padding:20rpx;
+}
+.mobileSet input{
+  border:1px solid #f1f1f1;
+  border-radius: 5px;
+  text-align: left;
+  padding:20rpx;
+  margin-top:20rpx; 
+}
+.codeBtn{
+  flex:0 0 140rpx;
+  font-size:24rpx;
+  background: #c22026;
+  color:#fff;
+  line-height: 88rpx;
+  margin:20rpx 0 0 40rpx;
+  border-radius: 5px;
+}
+.btnBox{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.btnBox text{
+  flex:0 0 50%;
+  border-top:1px solid #f1f1f1;
+}
+.btnBox text:last-child{
+  background: #c22026;
+  color: #fff;
+  border-radius: 0 0 5px 0;
+}
+.ft20{
+ font-size: 40rpx;
+ color:#4c4c4c;
+}
+.commentSet .content{
+  width: 100%;
+  bottom:0;
+  border-radius: 20rpx 20rpx 0 0;
+  padding:20rpx 20rpx 60rpx;
+}
+.commentSet .topBox {
+  align-items: center;
+  font-size:32rpx;
+}
+.commentSet .topBox text:last-child{
+  color:#c22026;
+}
+.commentSet textarea{
+  text-align: left;
+  padding:20rpx;
+  box-sizing: border-box;
+  height: 80rpx;
+  background: #f1f1f1;
+  width: 100%;
+  border-radius: 5px;
+  margin: 20rpx 0;
+}
+.filtermodal{
+  width: 80%;
+  height: 100%;
+  background: #fff;
+  z-index: 1001;
+  position: absolute;
+  right: 0;
+}
+.filterBox{
+  padding:76rpx 40rpx 70rpx;
+  box-sizing: border-box;
+  height: 100%;
+}
+.filterBox .type{
+  color: #000;
+  margin: 40rpx 0 20rpx;
+}
+.filterBox .radioItem{
+  background: #f1f1f1;
+  padding:10rpx 0;
+  width: 6em;
+  flex: 0 0 6em;
+  text-align: center;
+  border-radius: 6rpx;
+  margin:0 40rpx 20rpx 0; 
+  color:#7f7f7f;
+}
+.filterBox .flexStart,.filterBox .moneys{
+  flex-wrap: wrap;
+}
+.filterBox .radioItem:nth-child(3n){
+  margin-right: 0;
+}
+.filterBox .moneys .radioItem{
+  flex:0 0 230rpx;
+  margin-right: 0;
+}
+.filterBox scroll-view{
+  padding-top:0;
+  height: 100%; 
+}
+.filterBox input{
+  border:1px solid #7f7f7f;
+  border-radius: 10rpx;
+  padding-left:10rpx;
+}
+.filterBox input:first-child{
+  margin-right: 40rpx;
+}
+.filtermodal .btmBtn{
+  position: absolute;
+  bottom:0;
+  z-index: 1002;
+  width: 100%;
+}
+.filtermodal .btmBtn view{
+  width: 50%;
+  text-align: center;
+  background: #c22026;
+  color: #fff;
+  line-height: 70rpx;
+}
+.filtermodal .btmBtn view:first-child{
+  background: #f1c2ca
+}
+.radioItem.active{
+  background: #c22026;
+  color: #fff; 
+}
+.commentInfo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.commentInfo image{
+  max-width: 90%;
+}
+.mobileBind .btnBox{
+  background: #c22026;
+  color: #fff;
+  text-align: center;
+  border-radius: 0 0 6px 6px;
+}
+.mobileBind .columnBox .columnBox{
+  justify-content: center;
+}
+.mobileBind .columnBox .columnBox .ft20{
+  margin:10px 0; 
+}
+.signSuccess .content{
+  width: 500rpx;
+  height: 300rpx;
+}

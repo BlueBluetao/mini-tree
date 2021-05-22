@@ -1,0 +1,10 @@
+<!--pages/agent/agent.wxml-->
+<view class="content">
+	<view wx:for="{{list}}" wx:key="index" class="flexBox">
+		<image src="{{item.avatar_img}}" mode="aspectFill"></image>
+		<view class="columnBox alignStart">
+			<text class="title">{{item.name}}</text>
+			<view class="desc">{{item.description}}</view>
+		</view>
+	</view>
+</view>

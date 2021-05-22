@@ -1,0 +1,211 @@
+/**app.wxss**/
+page {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 24rpx;
+  color: #505050;
+  font-family: PingFangSC-Medium;
+} 
+.content{
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+.icon{
+  width: 40rpx;
+}
+.logoImg {
+  width: 80rpx;
+  height: 80rpx;
+}
+.rightIcon{
+  width: 32rpx;
+  height: 32rpx;
+}
+.ftBold{
+  font-weight: bold;
+}
+.ft18{
+  font-family: AppleSystemUIFont;
+  font-size: 18px;
+  color: #1C2A39;
+}
+.ft9{
+  font-size: 18rpx;
+}
+.ft14{
+  font-size: 28rpx;
+}
+.ft16{
+  font-size: 32rpx;
+}
+.ft20{
+  font-size: 40rpx;
+}
+.ft26{
+  font-size: 52rpx;
+}
+.ft30{
+  font-size: 60rpx;
+}
+.ft35{
+  font-size: 70rpx;
+}
+.black{
+  color:#1C2A39;
+}
+.gray{
+  color:#9b9b9b;
+}
+.green{
+  color:#56be80;
+}
+.overText{
+  text-align: left;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.columnBox{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.flexBox{
+  display: flex;
+  align-items: center;
+}
+.alignStart{
+  align-items: flex-start;
+}
+.alignEnd{
+  align-items: flex-end;
+}
+.flexBetween{
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+}
+.triangle {
+  border: solid #b2babe;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+}
+.bottomBox{
+  position: fixed;
+  bottom:20rpx;
+  width: 100%;
+  box-sizing: border-box;
+  padding:20rpx 40rpx;
+}
+.blueBtn{
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  background: #1f00ed;
+  border-radius: 28px;
+  height: 45px;
+  line-height: 45px;
+}
+button::after{
+  border:none;
+}
+.noMore{
+  text-align: center;
+  color:#d7d7da;
+  margin:30rpx 0; 
+}
+.title{
+  font-size: 32rpx;
+  color:#000;
+  font-weight: bold;
+}
+.btnBox{
+  background: #f2f2f2;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding:20rpx 30rpx;
+  box-sizing: border-box;
+  z-index: 11;
+}
+.btnBox .addBtn{
+  height: 70rpx;
+  line-height: 70rpx;
+  background: #c22026;
+  -webkit-box-shadow: 0 2px 4px 0 #f8f8f8;
+  box-shadow: 0 2px 4px 0 #f8f8f8;
+  border-radius: 40rpx;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+}
+@-webkit-keyframes bounce-down {
+  25% {
+    -webkit-transform: translateY(-6rpx);
+  }
+  75% {
+    -webkit-transform: translateY(6rpx);
+  }
+}
+@keyframes bounce-down {
+  25% {
+    transform: translateY(-6rpx);
+  }
+  75% {
+    transform: translateY(6rpx);
+  }
+}
+.animate-bounce-down{
+  -webkit-animation: bounce-down 1.3s linear infinite;
+  animation: bounce-down 1.3s linear infinite;
+}
+.triangle {
+  border: solid #c22026;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-45deg);
+}
+.triangle.btm{
+  transform: rotate(45deg);
+}
+.tabBar{
+  position: fixed;
+  top:0;
+  width: 100%;
+  background: #fff;
+  line-height: 80rpx;
+  border-bottom: 1px solid #f1f1f1;
+  justify-content: space-around;
+  color: #4c4c4c;
+  font-size:28rpx;
+}
+.tabBar>view{
+  border-bottom:2px solid transparent;
+}
+.tabBar .active{
+  border-bottom:2px solid #c22026;
+}
+.topBox{
+	padding:20rpx;
+}
+.search{
+  background: #fff;
+  border-radius: 5px;
+  padding:10rpx 0 10rpx 20rpx;
+}
+.search image{
+  width: 30rpx;
+  flex:0 0 30rpx;
+  margin-right: 10rpx;
+}
+.search input{
+  flex:1;
+  color: #1C2A39;
+}

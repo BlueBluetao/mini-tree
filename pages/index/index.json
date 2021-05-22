@@ -1,0 +1,11 @@
+{
+  "enablePullDownRefresh":true,
+  "onReachBottomDistance":50,
+  "usingComponents": {
+    "component-login": "/components/login/login",
+    "component-model": "/components/model/model",
+    "component-list": "/components/list/index",
+    "nav-bar":"/components/bar/index"
+  },
+  "navigationStyle": "custom"
+}

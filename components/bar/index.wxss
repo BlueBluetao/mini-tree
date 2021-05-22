@@ -1,0 +1,15 @@
+/* components/bar/index.wxss */
+.nav{
+	position: fixed;
+	z-index: 111;
+	width: 100%;
+	background: #fff;
+}
+.nav-search{
+	background: #dadada;
+	border-radius: 16px;
+	position: absolute;
+	left: 40rpx;
+	width: 60%;
+	padding-left: 12px;
+}

@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/detail/index",
+    "pages/index/search/index",
+    "pages/agent/agent",
+    "pages/society/society",
+    "pages/society/web/index"
+  ],
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#56be80",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "assets/tab/home_uns.png",
+        "selectedIconPath": "assets/tab/home.png",
+        "text": "金牌苗圃"
+      },
+      {
+        "pagePath": "pages/agent/agent",
+        "iconPath": "assets/tab/agent_uns.png",
+        "selectedIconPath": "assets/tab/agent.png",
+        "text": "经纪人"
+      },
+      {
+        "pagePath": "pages/society/society",
+        "iconPath": "assets/tab/society_uns.png",
+        "selectedIconPath": "assets/tab/society.png",
+        "text": "社区"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#56be80",
+    "navigationBarTitleText": "金牌苗圃",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json",
+  "requiredBackgroundModes": [
+    "audio",
+    "location"
+  ]
+}

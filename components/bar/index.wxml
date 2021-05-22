@@ -1,0 +1,6 @@
+<!--components/bar/index.wxml-->
+<view class='nav bg-white' style='height:{{navH}}px'>
+	<navigator wx:if="{{type=='search'}}" class="nav-search" style="line-height:{{menubtn.height+2}}px;top:{{menubtn.top}}px" url='/pages/index/search/index'>
+		搜索内容
+	</navigator>
+</view>

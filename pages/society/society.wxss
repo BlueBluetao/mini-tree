@@ -1,0 +1,14 @@
+/* pages/society/society.wxss */
+.list-item image{
+	width: 100%;
+	display: block;
+	height: 376rpx;
+}
+.alignStart{
+	padding:20rpx 30rpx;
+	color: #808080;
+	font-size: 24rpx;
+}
+.flexBetween{
+	margin-top:10rpx;
+}

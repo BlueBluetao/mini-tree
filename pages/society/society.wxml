@@ -1,0 +1,14 @@
+<!--pages/society/society.wxml-->
+<view class="content">
+	<view wx:for="{{list}}" wx:key="index" class="list-item columnBox">
+		<image src="{{item.img}}" mode="aspectFill"></image>
+		<view class="columnBox alignStart">
+			<text class="title">{{item.title}}</text>
+			<view>{{item.desc}}</view>
+			<view class="flexBox flexBetween">
+				<text>{{item.time}}</text>
+				<text>{{item.num}} 阅读</text>
+			</view>
+		</view>
+	</view>
+</view>

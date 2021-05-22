@@ -1,0 +1,6 @@
+<!--components/imgs/index.wxml-->
+<scroll-view scroll-x enable-flex scroll-left="{{scrollX}}rpx" class="scroll-view">
+			<view class="imgs" style="width:{{imgs.length*240}}rpx">
+				<image wx:for="{{imgs}}" src="{{item}}" class="imgs-item" mode="aspectFill" wx:key="*this"/>
+			</view>
+		</scroll-view>

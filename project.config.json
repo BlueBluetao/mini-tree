@@ -1,0 +1,170 @@
+{
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "nodeModules": true,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "useApiHostProcess": false,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "enableEngineNative": false,
+    "useIsolateContext": true,
+    "useCompilerModule": false,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.9.4",
+  "appid": "wx2e449460087c0308",
+  "projectname": "mini-trees",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "search": {
+      "list": []
+    },
+    "conversation": {
+      "list": []
+    },
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "currentL": -1,
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": 0,
+          "name": "列表",
+          "pathName": "pages/mine/mine",
+          "query": "uid=76fd3c8a94b69c34484e5a2063f79e87"
+        },
+        {
+          "id": 1,
+          "name": "pages/course/catalog/detail",
+          "pathName": "pages/course/catalog/detail",
+          "query": "id=172&cid=21&idx=0&bar=12",
+          "scene": 1048
+        },
+        {
+          "id": 2,
+          "name": "pages/index/search/search",
+          "pathName": "pages/index/search/search",
+          "query": "uniqueId=3fdb39ad5c7c48722dae438a5903972d",
+          "scene": 1048
+        },
+        {
+          "id": 3,
+          "name": "pages/society/society",
+          "pathName": "pages/society/society",
+          "query": "id=344",
+          "scene": 1048
+        },
+        {
+          "id": 4,
+          "name": "pages/circle/circle",
+          "pathName": "pages/circle/circle",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 5,
+          "name": "我的",
+          "pathName": "pages/mine/mine",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 6,
+          "name": "pages/mine/teacher/list/index",
+          "pathName": "pages/mine/teacher/list/index",
+          "query": "uniqueId=0",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "problem",
+          "pathName": "pages/mine/problem/problem",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 8,
+          "name": "pages/mine/paid/index",
+          "pathName": "pages/mine/paid/index",
+          "query": "id=8",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/mine/problem/index",
+          "pathName": "pages/mine/problem/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/mine/course/index",
+          "pathName": "pages/mine/course/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/mine/course/index",
+          "pathName": "pages/mine/course/index",
+          "query": "course=true",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/index/detail/index",
+          "pathName": "pages/index/detail/index",
+          "query": "id=8",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/agent/agent",
+          "pathName": "pages/agent/agent",
+          "query": "id=8",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

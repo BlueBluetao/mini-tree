@@ -1,0 +1,22 @@
+/* pages/index/detail/index.wxss */
+swiper{
+	height: 348rpx;
+}
+swiper-item image{
+	width: 100%;
+	object-fit: cover;
+}
+.main{
+	background: #e5e5e5;
+	padding:40rpx 30rpx;
+}
+.main>view{
+	margin-bottom: 20rpx;
+}
+.imgBox{
+	margin-top:50rpx
+}
+.imgBox image{
+	display: block;
+	width: 100%;
+}

@@ -1,0 +1,114 @@
+<!--components/modal/modal.wxml-->
+<view class="modals" wx:if="{{showModal}}">
+    <view class="modals-cancel" bindtap="toggle"></view>
+    <view class="dialog-body">
+      <!-- 评论弹窗 -->
+      <view wx:if="{{getType=='comment'}}" class="commentSet">
+        <view class="content">
+          <view class="columnBox">
+          <view class="topBox flexBox">
+              <text bindtap="toggle">取消</text>
+              <text class="ft20">回复</text>
+              <text bindtap="commentIt">确认</text>
+            </view>
+            <view class="main">
+              <textarea placeholder="请输入评论内容" value="{{content}}" focus="{{true}}" row="1" bindinput="bindKeyInput" data-type="content"/>
+            </view>
+            
+          </view>
+        </view>
+      </view>
+      <!-- 绑定手机提醒 -->
+      <view wx:if="{{getType=='mobileBind'}}" class="mobileBind mobileSet">
+        <view class="content">
+          <view class="columnBox">
+            <view class="main columnBox">
+              <text class="ft20">为了方便账户同步</text>
+              <text class="ft20">请绑定手机号</text>
+            </view>
+            <view class="btnBox" bindtap="mobileBind">
+              确定
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- 绑定手机弹窗 -->
+      <view wx:if="{{getType=='mobile'}}" class="mobileSet">
+        <view class="content">
+          <view class="columnBox">
+            <view class="main">
+              <text class="ft20">设置手机号</text>
+              <input placeholder="请填写手机号" bindinput="bindKeyInput" data-type="phone" value="{{phone}}"/>
+              <view class="flexBox">
+                <input placeholder="请填写验证码" bindinput="bindKeyInput" value="{{code}}" data-type="code"/>
+                <view class="codeBtn" bindtap="getCode">{{timer?time+'s':'获取验证码'}}</view>
+              </view>
+            </view>
+            <view class="btnBox flexBox">
+              <text bindtap="toggle">取消</text>
+              <text bindtap="bindPhone">确定</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- 课程列表弹窗 -->
+      <!-- 新增公司名称弹窗 -->
+      <view wx:if="{{getType=='company'}}" class="mobileSet">
+        <view class="content">
+          <view class="columnBox">
+            <view class="main">
+              <text class="ft20">新增公司及职务</text>
+              <textarea placeholder="请输入公司及职务" ></textarea>
+            </view>
+            <view class="btnBox flexBox">
+              <text bindtap="toggle">取消</text>
+              <text bindtap="addOne">确定</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view wx:if="{{getType=='commentInfo'}}" class="commentInfo">
+        <image src="./detail.jpg" mode="widthFix" bindtap="toggle"></image>
+      </view>
+      <view wx:if="{{getType=='signSuccess'}}" class="mobileBind signSuccess mobileSet">
+        <view class="content">
+          <view class="columnBox">
+            <view class="main columnBox">
+              <text class="ft20">签到成功</text>
+            </view>
+            <view class="btnBox" bindtap="toggle">
+              确定
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 师资库 条件筛选 -->
+    <view wx:if="{{getType=='filter'}}" class="filtermodal">
+      <view class="filterBox">
+        <scroll-view scroll-y	>
+          <view class="type">所属</view>
+          <view class="flexBox flexStart">
+            <view class="{{item==isSchool?'radioItem active':'radioItem'}}" wx:for="{{schools}}" wx:key="{{item}}" bindtap="filterFn" data-choose="{{item}}" data-type="1">{{item}}</view>
+          </view>
+          <view class="type">标签</view>
+          <view class="flexBox flexStart">
+            <view class="{{item.name==label?'radioItem active':'radioItem'}}" wx:for="{{labels}}" wx:key="{{item.name}}"  bindtap="filterFn" data-choose="{{item.name}}" data-type="2">{{item.name}}</view>
+          </view>
+          <view class="type">课酬</view>
+          <view class="flexBox moneys">
+            <view class="{{item==money?'radioItem active':'radioItem'}}" wx:for="{{moneys}}" wx:key="{{item}}"  bindtap="filterFn" data-choose="{{item}}" data-type="3">{{item}}</view>
+          </view>
+          <view class="type">评分</view>
+          <view class="flexBox" style="margin-bottom:40rpx;">
+            <input placeholder="请输入开始评分" type="digit" bindinput="bindKeyInput" data-type="1" value="{{evaluateStart}}"/>
+            <input placeholder="请输入结束评分" type="digit" bindinput="bindKeyInput" data-type="2" value="{{evaluateEnd}}"/>
+          </view>
+        </scroll-view>
+      </view>
+      <view class="flexBox btmBtn">
+        <view bindtap="reset">重置</view>
+        <view bindtap="comfirmFilter">确认</view>
+      </view>
+    </view>
+</view>

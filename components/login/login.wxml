@@ -1,0 +1,11 @@
+<!--components/login.wxml-->
+<view class="loginBox" wx:if="{{showLogin}}" >
+  <view class="columnBox">
+    <image src="../../assets/touxiang@2x.jpg" mode="widthFix" 
+    style="width:60px;border-radius:50%;margin-bottom:20px;"></image>
+    <text>您还未授权登录账户</text>
+      <button type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo" >微信授权
+    </button>
+      <view class="closeLogin" style="border:none;" bindtap="toggle">暂不授权</view>
+  </view>    
+</view>

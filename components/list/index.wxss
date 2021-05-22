@@ -1,0 +1,42 @@
+/* components/list/index.wxss */
+.listItem{
+  background: #e5e5e5;
+  padding:20rpx 40rpx 20rpx 20rpx;
+  box-sizing: border-box;
+  margin-bottom: 30rpx;
+}
+.listItem .img{
+  flex: 0 0 228rpx;
+  height: 232rpx;
+  margin-right: 20rpx;
+}
+.listItem .overText{
+  margin:8rpx 0 14rpx
+}
+.buttons{
+  margin-top:10rpx;
+}
+.buttons .button{
+  color: #fff;
+  background: #77d474;
+  border-radius: 30rpx;
+  padding:0 10rpx;
+  margin-right: 20rpx;
+}
+.imgs{
+	height: 212rpx;
+	white-space: nowrap;
+	background: #f1f1f1;
+}
+.scroll-view{
+	padding:20rpx 0;
+	box-sizing: border-box;
+	height: 252rpx;
+}
+.imgs .imgs-item{
+	display: block;
+	width:230rpx;
+	height: 100%;
+	margin-right: 10rpx;
+	float: left;
+}

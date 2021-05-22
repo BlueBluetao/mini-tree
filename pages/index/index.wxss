@@ -1,0 +1,36 @@
+/* pages/index/index.wxss */
+.scrollYBox{
+  box-sizing: border-box;
+}
+.tabBox{
+  color:#726161;
+  padding:26rpx 40rpx;
+  box-sizing: border-box;
+  height: 100rpx;
+  z-index: 100;
+  left: 0;
+  position: fixed;
+  background: #fff;
+}
+.tabBox .tabs{
+  white-space: nowrap;
+  display: flex;
+}
+.tabBox .tab-item{
+  margin-right: 10rpx;
+  padding:0 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tabBox .tab-item .line{
+  margin-top: 10rpx;
+}
+.tabBox .active{
+  color: #56be80;
+}
+.tabBox .active .line{
+  height: 3px;
+  width: 40rpx;
+  background: #56be80;
+}

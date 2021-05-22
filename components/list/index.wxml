@@ -1,0 +1,25 @@
+<!--components/list/index.wxml-->
+<view class="listBox">
+	<view class="listItem" wx:for="{{list}}" wx:key="index">
+	{{item.count}}
+		<view class="flexBox" bindtap="toDetail">
+			<image class="img" src="{{item.homepage_img}}" mode="widthFix"></image>
+			<view class="columnBox alignEnd">
+				<view class="columnBox alignStart">
+					<view class="title">{{item.name}}</view>
+					<view class="overText">{{item.description}}</view>
+					<view>{{item.address}}</view>
+				</view>
+				<view class="buttons flexBox">
+					<view class="button" catchtap="connect" data-phone="{{item.phone}}">立即联系</view>
+					<view class="button">查看详情</view>
+				</view>
+			</view>
+		</view>
+		<scroll-view scroll-x enable-flex scroll-left="{{item.scrollX}}rpx" wx:if="{{pageIn=='index'}}" class="scroll-view">
+			<view class="imgs" id="imgs_{{index}}" style="width:{{item.imgs.length*240}}rpx">
+				<image wx:for="{{item.imgs}}" wx:for-item="items" src="{{items}}" class="imgs-item" mode="aspectFill" wx:key="*this"/>
+			</view>
+		</scroll-view>
+	</view>
+</view>

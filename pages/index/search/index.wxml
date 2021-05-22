@@ -1,0 +1,40 @@
+<!--pages/index/search/index.wxml-->
+<view class="topBox flexBox">
+  <view class="searchBox flexBox">
+    <image class="icon" mode="widthFix" src="../../../assets/sousuo@2x.png"></image>
+    <input placeholder="请输入搜索文字" bindconfirm="confirm" value="{{searchName}}"/>
+  </view>
+  <text bindtap="cancle">取消</text>
+</view>
+<view class="main" wx:if="{{!showResults}}" style="padding: 40rpx;">
+  <view class="title">热门推荐</view>
+  <view class="keybox flexBox">
+    <view
+      class="keys ft14"
+      wx:for="{{hotList}}"
+      wx:key="id"
+      bindtap="search"
+      data-name="{{item.name}}"
+    >{{item.name}}</view>
+  </view>
+  <view class="flexBox flexBetween">
+    <view class="title">历史搜索</view>
+    <text bindtap="clear">清空</text>
+  </view>
+  <view class="keybox flexBox">
+    <view
+      class="keys ft14"
+      wx:for="{{list}}"
+      wx:key="index"
+      bindtap="search"
+      data-name="{{item}}"
+    >{{item}}</view>
+  </view>
+</view>
+<view class="main results" wx:if="{{showResults}}">
+  <component-list
+    start="{{start}}"
+		pageIn="search"
+    name="{{searchName}}"
+  ></component-list> 
+</view>

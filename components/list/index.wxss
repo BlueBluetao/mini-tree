@@ -46,3 +46,8 @@
 	margin-right: 10rpx;
 	float: left;
 }
+.nullBox{
+  background: #fafafa;
+  text-align: center;
+  padding-top:100rpx;
+}

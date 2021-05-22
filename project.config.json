@@ -50,17 +50,10 @@
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
   "condition": {
-    "search": {
-      "list": []
-    },
-    "conversation": {
-      "list": []
-    },
     "plugin": {
       "list": []
     },
     "game": {
-      "currentL": -1,
       "list": []
     },
     "gamePlugin": {
@@ -163,6 +156,11 @@
           "name": "pages/agent/agent",
           "pathName": "pages/agent/agent",
           "query": "id=8",
+          "scene": null
+        },
+        {
+          "name": "pages/index/search/index",
+          "pathName": "pages/index/search/index",
           "scene": null
         }
       ]

@@ -88,8 +88,6 @@ Component({
 			}
 			if(this.data.pageIn=='index') obj.type=this.data.type
 			if(this.data.pageIn=='search') obj.name=this.data.name
-// console.log(this.data.listType)
-// console.log(this.data.name)
 			await wxRequest('/shop/list',{
 				data:{
 					type:this.data.listType,
@@ -97,7 +95,6 @@ Component({
 				}
 			}).then((res) => {
 				if (res) {
-					console.log(res)
 					if(res.success == true) {
 							this.setData({
 									list:res.data

@@ -55,9 +55,7 @@ Page({
     })
   },
   confirm:function(e){
-   
     let name = e.detail.value
-    console.log(name)
     if (name != "" && this.data.list.indexOf(name)<0){
       let arr=[]
       arr.push(name)

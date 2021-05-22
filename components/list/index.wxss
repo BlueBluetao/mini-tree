@@ -13,6 +13,12 @@
 .listItem .overText{
   margin:8rpx 0 14rpx
 }
+.listItem .alignEnd{
+  flex:1;
+}
+.listItem .alignEnd .alignStart{
+  width: 100%;
+}
 .buttons{
   margin-top:10rpx;
 }

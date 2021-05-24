@@ -4,7 +4,7 @@
 	<block wx:else>
 		<view class="listItem" wx:for="{{list}}" wx:key="index">
 		{{item.count}}
-			<view class="flexBox" bindtap="toDetail">
+			<view class="flexBox" bindtap="toDetail"  data-id="{{item.id}}">
 				<image class="img" src="{{item.homepage_img}}" mode="widthFix"></image>
 				<view class="columnBox alignEnd">
 					<view class="columnBox alignStart">

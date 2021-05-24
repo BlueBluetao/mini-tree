@@ -1,30 +1,32 @@
 // pages/society/society.js
+import { wxRequest } from '../../utils/request.js'
 Page({
 
 	/**
 	 * 页面的初始数据
 	 */
 	data: {
-		list:[{
-			img:"/assets/2.jpg",
-			title:"蛀虫防治大全",
-			desc:"喷散农药喷散农药喷散农药喷散农药喷散农药喷散农药喷散农药喷散农药",
-			time:"7小时前",
-			num:8276
-		},{
-			img:"/assets/2.jpg",
-			title:"蛀虫防治大全",
-			desc:"喷散农药喷散农药喷散农药喷散农药喷散农药喷散农药喷散农药喷散农药",
-			time:"7小时前",
-			num:8276
-		}]
+		list:[],
+		// list:[{
+		// 	img:"/assets/2.jpg",
+		// 	title:"蛀虫防治大全",
+		// 	desc:"喷散农药喷散农药喷散农药喷散农药喷散农药喷散农药喷散农药喷散农药",
+		// 	time:"7小时前",
+		// 	num:8276
+		// },{
+		// 	img:"/assets/2.jpg",
+		// 	title:"蛀虫防治大全",
+		// 	desc:"喷散农药喷散农药喷散农药喷散农药喷散农药喷散农药喷散农药喷散农药",
+		// 	time:"7小时前",
+		// 	num:8276
+		// }]
 	},
 
 	/**
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function (options) {
-
+		this.getAticleList();
 	},
 
 	/**
@@ -74,5 +76,18 @@ Page({
 	 */
 	onShareAppMessage: function () {
 
-	}
+	},
+
+	async getAticleList(){
+    await wxRequest('/article/list',{}).then((res) => {
+      if (res) {
+        // console.log(res)
+        if(res.success == true) {
+            this.setData({
+              list:res.data
+            })
+        }
+      }
+    })
+  },
 })

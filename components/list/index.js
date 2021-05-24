@@ -134,8 +134,10 @@ Component({
 			})
 		},
 		toDetail(e){
+			console.log(e.currentTarget.dataset.id)
+			let id = e.currentTarget.dataset.id
 			wx.navigateTo({
-				url: '/pages/index/detail/index?id=1',
+				url: '/pages/index/detail/index?id='+id,
 			})
 		},
 		createAn(index){ 

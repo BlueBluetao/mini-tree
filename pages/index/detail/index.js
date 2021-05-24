@@ -1,5 +1,5 @@
 // pages/index/detail/index.js
-
+import { wxRequest } from '../../../utils/request.js'
 Page({
 
 	/**
@@ -7,15 +7,15 @@ Page({
 	 */
 	data: {
 		id:null,
-		info:{
-			img:"/assets/1.png",
-        imgs:["/assets/1.png","/assets/3.jpg","/assets/4.jpg","/assets/5.jpg"],
-        title:"金牌苗圃",
-        desc:"这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介",
-        addr:"句容市XXX街道XXX号",
-				tel:"15288888888",
-			
-		}
+		info:{},
+		// info:{
+		// 	  img:"/assets/1.png",
+    //     imgs:["/assets/1.png","/assets/3.jpg","/assets/4.jpg","/assets/5.jpg"],
+    //     name:"金牌苗圃",
+    //     description:"这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介",
+    //     address:"句容市XXX街道XXX号",
+		// 		phone:"15288888888",
+		// }
 	},
 
 	/**
@@ -26,9 +26,24 @@ Page({
 		this.setData({
 			id:options.id
 		})
+		this.getDetail(options.id)
 
 		
 	},
+
+  async getDetail(id){
+    await wxRequest('/shop/detail/'+id,{}).then((res) => {
+      if (res) {
+        // console.log(res)
+        if(res.success == true) {
+            this.setData({
+              info:res.data
+            })
+        }
+      }
+    })
+  },
+
 
 	/**
 	 * 生命周期函数--监听页面初次渲染完成

@@ -161,6 +161,12 @@
         {
           "name": "pages/index/search/index",
           "pathName": "pages/index/search/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/society/society",
+          "pathName": "pages/society/society",
           "scene": null
         }
       ]

@@ -8,6 +8,8 @@
 	padding:20rpx 30rpx;
 	color: #808080;
 	font-size: 24rpx;
+	width: 100%;
+	box-sizing: border-box;
 }
 .flexBetween{
 	margin-top:10rpx;

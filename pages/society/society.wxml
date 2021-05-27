@@ -1,6 +1,6 @@
 <!--pages/society/society.wxml-->
 <view class="content">
-	<view wx:for="{{list}}" wx:key="index" class="list-item columnBox">
+	<view wx:for="{{list}}" wx:key="index" class="list-item columnBox" bindtap="toDetail" data-url="{{item.url}}">
 		<image src="{{item.img}}" mode="aspectFill"></image>
 		<view class="columnBox alignStart">
 			<text class="title">{{item.title}}</text>

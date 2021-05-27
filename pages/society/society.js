@@ -6,20 +6,21 @@ Page({
 	 * 页面的初始数据
 	 */
 	data: {
-		list:[],
-		// list:[{
-		// 	img:"/assets/2.jpg",
-		// 	title:"蛀虫防治大全",
-		// 	desc:"喷散农药喷散农药喷散农药喷散农药喷散农药喷散农药喷散农药喷散农药",
-		// 	time:"7小时前",
-		// 	num:8276
-		// },{
-		// 	img:"/assets/2.jpg",
-		// 	title:"蛀虫防治大全",
-		// 	desc:"喷散农药喷散农药喷散农药喷散农药喷散农药喷散农药喷散农药喷散农药",
-		// 	time:"7小时前",
-		// 	num:8276
-		// }]
+		list:[{
+			img:"/assets/2.jpg",
+			title:"蛀虫防治大全",
+			desc:"喷散农药喷散农药喷散农药喷散农药喷散农药喷散农药喷散农药喷散农药",
+			time:"7小时前",
+			num:8276,
+			url:"https://www.baidu.com"
+		},{
+			img:"/assets/2.jpg",
+			title:"蛀虫防治大全",
+			desc:"喷散农药喷散农药喷散农药喷散农药喷散农药喷散农药喷散农药喷散农药",
+			time:"7小时前",
+			num:8276,
+			url:"https://www.bilibili.com"
+		}]
 	},
 
 	/**
@@ -28,7 +29,12 @@ Page({
 	onLoad: function (options) {
 		this.getAticleList();
 	},
-
+	toDetail(e){
+		let url = e.currentTarget.dataset.url
+		wx.navigateTo({
+			url: '/pages/society/web/index?url='+encodeURIComponent(url),
+		})
+	},
 	/**
 	 * 生命周期函数--监听页面初次渲染完成
 	 */

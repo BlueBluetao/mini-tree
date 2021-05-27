@@ -8,10 +8,10 @@
 		</block>
 	</swiper>
 	<view class="main">
-		<view class="title">{{info.title}}</view>
-		<view>{{info.tel}}</view>
-		<view>{{info.addr}}</view>
-		<view>{{info.desc}}</view>
+		<view class="title">{{info.name}}</view>
+		<view>{{info.phone}}</view>
+		<view>{{info.address}}</view>
+		<view>{{info.description}}</view>
 		<view class="imgBox">
 			<image wx:for="{{info.imgs}}" wx:key="*this" src="{{item}}" mode="widthFix"></image>
 		</view>

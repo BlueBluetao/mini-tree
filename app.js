@@ -55,8 +55,7 @@ App({
     
   },
   globalData: {   
-    // baseUrl: "http://localhost:8080" , 
-    baseUrl: "http://weapp.miaomu0511.cn" , 
-    navHeight:0  
+    // baseUrl: "http://localhost:8080" ,
+    baseUrl: "http://weapp.miaomu0511.cn" ,
   }
 })

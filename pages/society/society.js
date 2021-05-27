@@ -1,4 +1,5 @@
 // pages/society/society.js
+import { wxRequest } from '../../utils/request.js'
 Page({
 
 	/**
@@ -26,7 +27,7 @@ Page({
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function (options) {
-
+		this.getAticleList();
 	},
 	toDetail(e){
 		let url = e.currentTarget.dataset.url
@@ -81,5 +82,18 @@ Page({
 	 */
 	onShareAppMessage: function () {
 
-	}
+	},
+
+	async getAticleList(){
+    await wxRequest('/article/list',{}).then((res) => {
+      if (res) {
+        // console.log(res)
+        if(res.success == true) {
+            this.setData({
+              list:res.data
+            })
+        }
+      }
+    })
+  },
 })
